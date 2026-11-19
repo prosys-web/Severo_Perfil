@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Severo Alves | Negócios e Tecnologia Aplicada</title>
+<style>
+*{box-sizing:border-box}
+:root{--navy:#10283e;--navy-2:#153552;--gold:#e5c17b;--bg:#f2f5f7;--card:#ffffff;--line:#dce3e9;--text:#10283e;--muted:#5a6b7c;--soft:#f8fafb}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:inherit}img{max-width:100%;display:block}
+main{max-width:1100px;margin:auto;background:#fff;box-shadow:0 12px 32px rgba(16,40,62,.06)}
+header,footer{background:linear-gradient(180deg,var(--navy),var(--navy-2));color:#fff}
+header{padding:42px 32px 36px} section{padding:32px}
+.badge{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+h1{font-size:clamp(30px,6vw,48px);line-height:1.06;margin:0 0 8px}
+h2{font-size:26px;line-height:1.2;margin:0 0 14px} h3{font-size:18px;line-height:1.3;margin:0 0 6px} p{margin:0 0 12px}
+.lead{font-size:18px;max-width:760px;color:#eef4f8}.sublead{max-width:760px;color:#d9e3ea}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:22px}.kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:16px;border-radius:10px}.kpi b{display:block;font-size:22px;color:#fff}.kpi span{font-size:14px;color:#d8e4ec}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}.cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--navy);color:#fff;padding:14px 18px;text-align:center;text-decoration:none;border-radius:8px;font-weight:700;border:1px solid var(--navy);transition:.2s}.cta:hover{transform:translateY(-1px)}.cta.gold{background:var(--gold);color:var(--navy);border-color:var(--gold)}.cta.ghost{background:#fff;color:var(--navy);border-color:#d5dee6}
+.eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);font-weight:800;margin-bottom:8px}
+.highlight{display:grid;grid-template-columns:1.25fr .95fr;gap:18px}.panel{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:20px}.panel ul{margin:0;padding-left:18px;color:var(--muted)}.panel li{margin:0 0 8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:18px;margin-top:18px}
+details.card{border:1px solid var(--line);border-radius:14px;background:var(--card);overflow:hidden} details.card[open]{box-shadow:0 10px 24px rgba(16,40,62,.08)} details.card summary{list-style:none;cursor:pointer} details.card summary::-webkit-details-marker{display:none}
+.thumb{position:relative;height:190px;background:#e9eef2;overflow:hidden;border-bottom:1px solid var(--line)} .thumb img{width:100%;height:100%;object-fit:cover;object-position:top center}.thumb:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,40,62,0) 30%,rgba(16,40,62,.42) 100%)}
+.thumb-label{position:absolute;right:12px;top:12px;z-index:2;font-size:11px;background:rgba(255,255,255,.92);padding:4px 8px;border-radius:999px;color:var(--navy);font-weight:800;border:1px solid rgba(16,40,62,.1)}
+.thumb-caption{position:absolute;left:14px;bottom:14px;z-index:2;color:#fff;font-size:13px;font-weight:700;max-width:72%}
+.card-body{padding:16px}.card-title{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.card-title span{display:inline-block;font-size:12px;color:var(--gold);font-weight:800;letter-spacing:.08em}.card p.small{color:var(--muted);font-size:14px;margin:8px 0 0}
+.detail{padding:0 16px 16px}.detail-inner{border-top:1px solid var(--line);padding-top:14px}.detail ul{margin:10px 0 12px;padding-left:18px;color:var(--muted)}.detail li{margin-bottom:7px}.meta{font-size:14px;color:var(--muted);margin-top:4px}.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.tag{border:1px solid #d6e0e8;background:#f7fafc;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700;color:#36506a}
+.preview{margin:14px 0 10px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}.preview small{display:block;padding:8px 10px;background:#f6f9fb;color:var(--muted)}
+.exp-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:12px}.exp-item{border:1px solid var(--line);background:#fff;border-radius:12px;padding:16px}.exp-item b{display:block;margin-bottom:5px}.note{font-size:14px;color:var(--muted)}
+footer{padding:26px 32px}.footer-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:center}.footer-row a{color:#fff}.muted-on-dark{color:#d9e3ea}
+@media (max-width:800px){header,section,footer{padding:24px 18px}.highlight{grid-template-columns:1fr}.kpis{grid-template-columns:1fr}.cta-row{flex-direction:column}.cta{width:100%}.thumb{height:170px}}
+
+.topnav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-bottom:21px;margin-bottom:28px;border-bottom:1px solid #ffffff30}.topnav a{text-decoration:none;font-size:13px;color:#eef4f8}.topnav .brand{font-weight:800;letter-spacing:.08em;color:var(--gold)}.topnav div{display:flex;flex-wrap:wrap;gap:16px}.hero-layout{display:grid;grid-template-columns:1.22fr .9fr;gap:30px;align-items:center}.hero-copy{min-width:0}.portrait{margin:0;position:relative;border-radius:12px;overflow:hidden;border:1px solid #ffffff25;background:#18364d}.portrait img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:51% center}.hero-copy .cta-row{gap:8px}.hero-copy .cta{font-size:14px;padding:11px 13px}.hero-copy .cta:not(.gold):not(.ghost){border-color:#ffffff55}.eyebrow,.card-title span{color:#856222}.grid{align-items:start;grid-template-columns:repeat(auto-fit,minmax(min(100%,310px),1fr))}details[open] .card-title strong{font-size:0}details[open] .card-title strong:after{content:'−';font-size:20px}.zoom{display:block;border:0;padding:0;background:transparent;cursor:zoom-in;width:100%}.zoom img{width:100%}dialog{max-width:min(96vw,1200px);width:100%;max-height:92vh;border:0;border-radius:12px;padding:12px;background:white;color:#10283e}dialog::backdrop{background:#071827cc}dialog img{max-height:75vh;max-width:100%;margin:auto;object-fit:contain}dialog button{display:block;margin:0 0 10px auto;padding:9px 16px;border:0;border-radius:6px;background:#10283e;color:white;cursor:pointer}a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid #ca9b41;outline-offset:3px}.thumb img{object-fit:contain;background:#edf2f6}.thumb:after{pointer-events:none}
+@media(max-width:800px){.hero-layout{grid-template-columns:1fr;gap:20px}.portrait{grid-row:1;width:min(100%,300px);justify-self:center}.portrait img{aspect-ratio:5/4;object-position:center 38%}.topnav{margin-bottom:18px}.topnav div{gap:9px}.topnav a{font-size:12px}.hero-copy .cta-row{flex-direction:column}.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}.kpi{padding:10px}.kpi b{font-size:15px}.kpi span{font-size:11px}}@media(max-width:370px){.kpis{grid-template-columns:1fr}.topnav{flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<main>
+<header id="inicio"><nav aria-label="Navegação principal" class="topnav"><a class="brand" href="#inicio">SEVERO ALVES</a><div><a href="#competencias">Competências</a><a href="#experiencia">Experiência</a><a href="#contato">Contato</a></div></nav><div class="hero-layout"><div class="hero-copy">
+<div class="badge">Portfólio Profissional</div>
+<h1>Severo Alves</h1>
+<p style="margin:0 0 8px;font-weight:700">Executivo de Crescimento Comercial</p>
+<h2 style="margin:0 0 12px;color:#fff">Negócios e Tecnologia Aplicada</h2>
+<p class="lead">Eu ajudo empresas a crescer de forma organizada, conectando gestão comercial, processos, dados, automação e inteligência artificial.</p>
+<p class="sublead">Experiência em negócios, execução comercial e desenvolvimento de soluções digitais para operações empresariais.</p>
+
+
+<div class="cta-row">
+<a class="cta gold" href="Curriculo_Severo_Links_Corrigidos.pdf" rel="noopener" target="_blank">Consultar currículo profissional</a>
+<a class="cta" href="https://wa.me/5585994249656?text=Ol%C3%A1%2C%20Severo!%20Conheci%20seu%20portf%C3%B3lio%20profissional%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade%20de%20trabalho%2C%20projeto%20ou%20parceria." rel="noopener noreferrer" target="_blank">Conversar pelo WhatsApp</a>
+<a class="cta ghost" href="mailto:sjrbrito@gmail.com">Enviar e-mail</a>
+</div></div><figure class="portrait"><img alt="Retrato profissional de Severo Alves" fetchpriority="high" height="880" src="assets/severo.jpg" width="1100"/></figure></div><div class="kpis">
+<div class="kpi"><b>30+ anos</b><span>Experiência profissional em negócios, vendas, estruturação e desenvolvimento empresarial.</span></div>
+<div class="kpi"><b>Gestão + Tecnologia</b><span>Integração entre visão executiva, operação comercial e capacidade de execução técnica.</span></div>
+<div class="kpi"><b>Múltiplos formatos</b><span>Atuação em trabalho remoto CLT ou PJ, projetos sob demanda e parcerias especializadas.</span></div>
+</div></header>
+<section id="atuacao">
+<div class="eyebrow">Como posso contribuir</div>
+<div class="highlight">
+<div class="panel">
+<h2>Competências que unem resultado, processo e execução</h2>
+<p>Conecto necessidades reais de negócio a soluções comerciais, operacionais e tecnológicas, com escopo claro, execução prática e acompanhamento.</p>
+<p>Explore as áreas abaixo para conhecer aplicações, ferramentas e exemplos de interfaces. As imagens de projetos tiveram informações identificáveis e dados sensíveis ocultados.</p>
+</div>
+<div class="panel">
+<h3>Modelos de atuação</h3>
+<ul>
+<li>Estruturação comercial, CRM e indicadores</li>
+<li>Dashboards gerenciais, BI e inteligência financeira</li>
+<li>Automação, integrações e IA aplicada</li>
+<li>Recrutamento, avaliação e análise de perfil</li>
+<li>Processos, licitações e presença digital</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="competencias">
+<div class="eyebrow">Explore minhas competências</div>
+<div class="grid">
+<details class="card">
+<summary>
+<div class="thumb">
+<img alt="Comercial e CRM — Demonstração recriada" loading="lazy" src="assets/painel_dark.png"/>
+<span class="thumb-label">Demonstração recriada</span>
+<div class="thumb-caption">Exemplo visual de painel comercial e acompanhamento operacional</div>
+</div>
+<div class="card-body">
+<div class="card-title"><div><span>01</span><h3>Comercial e CRM</h3></div><strong>+</strong></div>
+<p class="small">Vendas, prospecção B2B, funil, atendimento, follow-up e acompanhamento de oportunidades.</p>
+</div>
+</summary>
+<div class="detail"><div class="detail-inner">
+<p>Estruturação da rotina comercial com foco em previsibilidade, leitura da operação, produtividade e melhora da conversão.</p>
+<ul>
+<li>Mapeamento da jornada comercial e do processo de vendas</li>
+<li>Implantação ou organização de funil, CRM e acompanhamento de carteira</li>
+<li>Cadências, follow-up, propostas e indicadores de desempenho</li>
+</ul>
+<div class="tag-row"><span class="tag">CRM</span><span class="tag">Pipeline</span><span class="tag">Prospecção</span><span class="tag">Vendas B2B</span></div>
+<div class="preview"><button aria-label="Ampliar imagem de Comercial e CRM" class="zoom" type="button"><img alt="Comercial e CRM — Demonstração recriada" loading="lazy" src="assets/painel_dark.png"/></button><small>Demonstração recriada — clique na imagem para ampliar.</small></div>
+<a class="cta" href="https://wa.me/5585994249656?text=Ol%C3%A1%2C%20Severo!%20Tenho%20interesse%20em%20conversar%20sobre%20estrutura%C3%A7%C3%A3o%20comercial%20e%20CRM." rel="noopener noreferrer" target="_blank">Conversar sobre Comercial e CRM</a>
+</div></div>
+</details>
+<details class="card">
+<summary>
+<div class="thumb">
+<img alt="Dashboards, BI e PIF — Interface com dados ocultos" loading="lazy" src="assets/painel_financeiro.png"/>
+<span class="thumb-label">Interface com dados ocultos</span>
+<div class="thumb-caption">Leitura gerencial e inteligência financeira</div>
+</div>
+<div class="card-body">
+<div class="card-title"><div><span>02</span><h3>Dashboards, BI e PIF</h3></div><strong>+</strong></div>
+<p class="small">Dados para tomada de decisão por meio de painéis comerciais, gerenciais e financeiros.</p>
+</div>
+</summary>
+<div class="detail"><div class="detail-inner">
+<p>Transformação de dados em informação útil, com estrutura visual objetiva e indicadores orientados à decisão.</p>
+<ul>
+<li>Painéis de inteligência financeira, comercial e operacional</li>
+<li>KPIs, metas, projeções e leitura consolidada da operação</li>
+<li>Organização visual para gestores e rotinas de acompanhamento</li>
+</ul>
+<div class="tag-row"><span class="tag">PIF</span><span class="tag">Business Intelligence</span><span class="tag">KPIs</span><span class="tag">Dashboards</span></div>
+<div class="preview"><button aria-label="Ampliar imagem de Dashboards, BI e PIF" class="zoom" type="button"><img alt="Dashboards, BI e PIF — Interface com dados ocultos" loading="lazy" src="assets/painel_financeiro.png"/></button><small>Interface com dados ocultos — clique na imagem para ampliar.</small></div>
+<a class="cta" href="https://wa.me/5585994249656?text=Ol%C3%A1%2C%20Severo!%20Tenho%20interesse%20em%20conversar%20sobre%20dashboards%2C%20BI%20ou%20pain%C3%A9is%20gerenciais." rel="noopener noreferrer" target="_blank">Conversar sobre Dashboards e BI</a>
+</div></div>
+</details>
+<details class="card">
+<summary>
+<div class="thumb">
+<img alt="Automação e integrações — Protótipo demonstrativo" loading="lazy" src="assets/gov_robots.png"/>
+<span class="thumb-label">Protótipo demonstrativo</span>
+<div class="thumb-caption">Fluxos, motores, conectores e automações</div>
+</div>
+<div class="card-body">
+<div class="card-title"><div><span>03</span><h3>Automação e integrações</h3></div><strong>+</strong></div>
+<p class="small">Processos inteligentes com integrações, APIs, sincronização de dados e redução de retrabalho.</p>
+</div>
+</summary>
+<div class="detail"><div class="detail-inner">
+<p>Desenho e desenvolvimento de fluxos com n8n, Make e APIs. O exemplo visual apresenta a arquitetura de conectores e motores de um protótipo de inteligência em negócios públicos.</p>
+<ul>
+<li>Automação com n8n e Make</li>
+<li>Integração entre formulários, planilhas, CRM, e-mail e APIs</li>
+<li>Alertas, validações, distribuição e documentação do fluxo</li>
+</ul>
+<div class="tag-row"><span class="tag">n8n</span><span class="tag">Make</span><span class="tag">APIs</span><span class="tag">Integrações</span></div>
+<div class="preview"><button aria-label="Ampliar imagem de Automação e integrações" class="zoom" type="button"><img alt="Automação e integrações — Protótipo demonstrativo" loading="lazy" src="assets/gov_robots.png"/></button><small>Protótipo demonstrativo — clique na imagem para ampliar.</small></div>
+<a class="cta" href="https://wa.me/5585994249656?text=Ol%C3%A1%2C%20Severo!%20Tenho%20interesse%20em%20conversar%20sobre%20automa%C3%A7%C3%A3o%20e%20integra%C3%A7%C3%B5es." rel="noopener noreferrer" target="_blank">Conversar sobre Automação</a>
+</div></div>
+</details>
+<details class="card">
+<summary>
+<div class="thumb">
+<img alt="Inteligência artificial aplicada — Protótipo demonstrativo" loading="lazy" src="assets/gov_central.png"/>
+<span class="thumb-label">Protótipo demonstrativo</span>
+<div class="thumb-caption">IA aplicada à descoberta, análise e decisão</div>
+</div>
+<div class="card-body">
+<div class="card-title"><div><span>04</span><h3>Inteligência artificial aplicada</h3></div><strong>+</strong></div>
+<p class="small">Agentes, prompts, motores de análise e apoio à produtividade orientado a necessidades reais.</p>
+</div>
+</summary>
+<div class="detail"><div class="detail-inner">
+<p>Uso de IA para acelerar processos, organizar conhecimento, apoiar análise e ampliar capacidade operacional.</p>
+<ul>
+<li>Desenvolvimento de agentes de IA e fluxos assistidos</li>
+<li>Engenharia de prompts e estruturação de instruções</li>
+<li>Aplicação prática em comercial, gestão, análise e produção de conteúdo</li>
+</ul>
+<div class="tag-row"><span class="tag">Agentes de IA</span><span class="tag">Prompts</span><span class="tag">Produtividade</span><span class="tag">Análise</span></div>
+<div class="preview"><button aria-label="Ampliar imagem de Inteligência artificial aplicada" class="zoom" type="button"><img alt="Inteligência artificial aplicada — Protótipo demonstrativo" loading="lazy" src="assets/gov_central.png"/></button><small>Protótipo demonstrativo — clique na imagem para ampliar.</small></div>
+<a class="cta" href="https://wa.me/5585994249656?text=Ol%C3%A1%2C%20Severo!%20Tenho%20interesse%20em%20conversar%20sobre%20solu%C3%A7%C3%B5es%20com%20intelig%C3%AAncia%20artificial." rel="noopener noreferrer" target="_blank">Conversar sobre IA Aplicada</a>
+</div></div>
+</details>
+<details class="card">
+<summary>
+<div class="thumb">
+<img alt="Recrutamento, testes e análise de perfil — Interface com dados ocultos" loading="lazy" src="assets/selecao.png"/>
+<span class="thumb-label">Interface com dados ocultos</span>
+<div class="thumb-caption">Seleção, avaliação e análise de perfil</div>
+</div>
+<div class="card-body">
+<div class="card-title"><div><span>05</span><h3>Recrutamento, testes e análise de perfil</h3></div><strong>+</strong></div>
+<p class="small">Seleção comercial, avaliação estruturada e apoio à decisão por evidências e critérios.</p>
+</div>
+</summary>
+<div class="detail"><div class="detail-inner">
+<p>Estruturação de processos seletivos e apoio à análise de perfil para contratações mais consistentes.</p>
+<ul>
+<li>Seleção comercial com etapas organizadas e critérios de avaliação</li>
+<li>Testes, perguntas estruturadas e leitura comportamental</li>
+<li>Motor de análise de perfil profissional baseado em evidências relacionadas à função, com revisão e decisão humana; sem diagnóstico psicológico ou classificação automática.</li>
+</ul>
+<div class="tag-row"><span class="tag">Recrutamento</span><span class="tag">Avaliação</span><span class="tag">Perfil</span><span class="tag">Seleção comercial</span></div>
+<div class="preview"><button aria-label="Ampliar imagem de Recrutamento, testes e análise de perfil" class="zoom" type="button"><img alt="Recrutamento, testes e análise de perfil — Interface com dados ocultos" loading="lazy" src="assets/selecao.png"/></button><small>Interface com dados ocultos — clique na imagem para ampliar.</small></div>
+<a class="cta" href="https://wa.me/5585994249656?text=Ol%C3%A1%2C%20Severo!%20Tenho%20interesse%20em%20conversar%20sobre%20recrutamento%2C%20avalia%C3%A7%C3%A3o%20ou%20an%C3%A1lise%20de%20perfil." rel="noopener noreferrer" target="_blank">Conversar sobre Recrutamento e Perfil</a>
+</div></div>
+</details>
+<details class="card">
+<summary>
+<div class="thumb">
+<img alt="Processos, licitações e inteligência operacional — Protótipo demonstrativo" loading="lazy" src="assets/gov_central.png"/>
+<span class="thumb-label">Protótipo demonstrativo</span>
+<div class="thumb-caption">Processos estruturados, leitura de oportunidade e inteligência operacional</div>
+</div>
+<div class="card-body">
+<div class="card-title"><div><span>06</span><h3>Processos, licitações e inteligência operacional</h3></div><strong>+</strong></div>
+<p class="small">Organização de rotinas, documentação, análise e uso de IA em processos mais estruturados.</p>
+</div>
+</summary>
+<div class="detail"><div class="detail-inner">
+<p>Atuação voltada à organização operacional, documentação, inteligência aplicada e leitura de processos públicos ou privados.</p>
+<ul><li>Radar de oportunidades e filtros de aderência à capacidade de fornecimento</li><li>Leitura assistida de editais, prazos, requisitos e documentação</li><li>Histórico competitivo, preços, atas e análise de risco de recebimento</li><li>Protótipo GOV: conectores de fontes públicas previstos; integrações dependem de implementação e validação</li></ul>
+<div class="tag-row"><span class="tag">Licitações</span><span class="tag">Processos</span><span class="tag">Documentação</span><span class="tag">Operação</span></div>
+<div class="preview"><button aria-label="Ampliar imagem de Processos, licitações e inteligência operacional" class="zoom" type="button"><img alt="Processos, licitações e inteligência operacional — Protótipo demonstrativo" loading="lazy" src="assets/gov_central.png"/></button><small>Protótipo demonstrativo — clique na imagem para ampliar.</small></div>
+<a class="cta" href="https://wa.me/5585994249656?text=Ol%C3%A1%2C%20Severo!%20Tenho%20interesse%20em%20conversar%20sobre%20processos%2C%20licita%C3%A7%C3%B5es%20ou%20intelig%C3%AAncia%20operacional." rel="noopener noreferrer" target="_blank">Conversar sobre Processos e Licitações</a>
+</div></div>
+</details>
+<details class="card">
+<summary>
+<div class="thumb">
+<img alt="Sites, sistemas web e presença digital — Interface com dados ocultos" loading="lazy" src="assets/painel_comercial.png"/>
+<span class="thumb-label">Interface com dados ocultos</span>
+<div class="thumb-caption">Interfaces, páginas e sistemas web orientados ao negócio</div>
+</div>
+<div class="card-body">
+<div class="card-title"><div><span>07</span><h3>Sites, sistemas web e presença digital</h3></div><strong>+</strong></div>
+<p class="small">Desenvolvimento web, páginas profissionais, sistemas e fortalecimento da presença digital.</p>
+</div>
+</summary>
+<div class="detail"><div class="detail-inner">
+<p>Construção e organização de presença digital para empresas que precisam comunicar melhor seu valor, apoiar captação e estruturar ambientes web úteis ao negócio.</p>
+<ul>
+<li>Sites institucionais, landing pages e ambientes internos</li>
+<li>Google Business Profile, SEO local e estruturação digital</li>
+<li>Conteúdo, apresentação e experiência orientada à conversão</li>
+</ul>
+<div class="tag-row"><span class="tag">WordPress</span><span class="tag">GitHub</span><span class="tag">SEO Local</span><span class="tag">Google</span></div>
+<div class="preview"><button aria-label="Ampliar imagem de Sites, sistemas web e presença digital" class="zoom" type="button"><img alt="Sites, sistemas web e presença digital — Interface com dados ocultos" loading="lazy" src="assets/painel_comercial.png"/></button><small>Interface com dados ocultos — clique na imagem para ampliar.</small></div>
+<a class="cta" href="https://wa.me/5585994249656?text=Ol%C3%A1%2C%20Severo!%20Tenho%20interesse%20em%20conversar%20sobre%20sites%2C%20sistemas%20web%20ou%20presen%C3%A7a%20digital." rel="noopener noreferrer" target="_blank">Conversar sobre Presença Digital</a>
+</div></div>
+</details>
+</div>
+</section>
+<section id="experiencia">
+<div class="eyebrow">Experiência aplicada</div>
+<h2>Base profissional que sustenta a entrega</h2>
+<p class="meta">Mais de 30 anos de experiência profissional em negócios, com atuação prática em estruturação comercial, gestão, benefícios corporativos, desenvolvimento de negócios e soluções aplicadas.</p>
+<div class="exp-list">
+<div class="exp-item"><b>Presença Pro</b><span class="note">Presença digital, sites, Google e soluções voltadas a pequenos negócios.</span></div>
+<div class="exp-item"><b>Revizi Corretora</b><span class="note">Benefícios corporativos, inteligência comercial, gestão por indicadores e geração de demanda.</span></div>
+<div class="exp-item"><b>Nexum</b><span class="note">Metodologia de inteligência comercial, geração de oportunidades e estruturação de modelo.</span></div>
+<div class="exp-item"><b>Experiência executiva</b><span class="note">Carreira em bancos, saúde, seguros e desenvolvimento de negócios.</span></div>
+</div>
+</section>
+<section id="contato">
+<div class="eyebrow">Modelos de atuação</div>
+<h2>Vamos conversar sobre soluções e parcerias</h2>
+<p>Modelos de atuação: trabalho remoto CLT ou PJ, projetos sob demanda e parcerias especializadas.</p>
+<p class="note">Se a sua necessidade estiver ligada a uma das competências apresentadas, o caminho mais rápido é iniciar a conversa pelo WhatsApp ou e-mail.</p>
+<div class="cta-row">
+<a class="cta gold" href="Curriculo_Severo_Links_Corrigidos.pdf" rel="noopener" target="_blank">Consultar currículo profissional</a>
+<a class="cta" href="https://wa.me/5585994249656?text=Ol%C3%A1%2C%20Severo!%20Conheci%20seu%20portf%C3%B3lio%20profissional%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade%20de%20trabalho%2C%20projeto%20ou%20parceria." rel="noopener noreferrer" target="_blank">Conversar pelo WhatsApp</a>
+<a class="cta ghost" href="mailto:sjrbrito@gmail.com">Enviar e-mail</a>
+</div>
+</section>
+<footer>
+<div class="footer-row">
+<div><strong>Estruturando crescimento. Gerando resultados.</strong><br/><span class="muted-on-dark">Fortaleza, CE · Brasil</span></div>
+<div><a href="https://www.linkedin.com/in/severo-brito-jr-88794643/" rel="noopener" target="_blank">LinkedIn</a></div>
+</div>
+</footer>
+</main>
+<dialog id="image-dialog" aria-label="Visualização ampliada"><button type="button" id="close-image">Fechar ×</button><img id="large-image" alt=""></dialog><script>const dlg=document.getElementById('image-dialog'), large=document.getElementById('large-image');document.querySelectorAll('.zoom').forEach(b=>b.addEventListener('click',()=>{const im=b.querySelector('img');large.src=im.src;large.alt=im.alt;dlg.showModal()}));document.getElementById('close-image').addEventListener('click',()=>dlg.close());dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});</script></body>
+</html>
